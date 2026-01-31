@@ -175,15 +175,26 @@ footer{
 .modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.94);
+    background:rgba(0,0,0,.85);
     display:none;
     align-items:center;
     justify-content:center;
     z-index:100;
-    backdrop-filter:blur(12px)
+    backdrop-filter:blur(12px);
+    opacity:0;
+    transition:opacity .3s ease
+}
+
+.modal.show{
+    opacity:1
+}
+
+.modal.hide{
+    opacity:0
 }
 
 .modal-content{
+    position:relative;
     background:linear-gradient(180deg,#0b0b13,#050509);
     padding:46px;
     max-width:620px;
@@ -192,7 +203,7 @@ footer{
     text-align:center;
     transform:scale(.7);
     opacity:0;
-    transition:.35s
+    transition:transform .35s ease, opacity .35s ease
 }
 
 .modal.show .modal-content{
@@ -219,7 +230,13 @@ footer{
     right:30px;
     cursor:pointer;
     font-size:28px;
-    color:#eee
+    color:#eee;
+    transition:.3s
+}
+
+.close:hover{
+    color:#fff;
+    transform:scale(1.2)
 }
 
 .reveal{
@@ -243,6 +260,7 @@ footer{
 @keyframes glowText{from{text-shadow:0 0 20px #5b3cff}to{text-shadow:0 0 45px #9f88ff}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes pulseSoft{0%,100%{opacity:.8}50%{opacity:1}}
+
 
 
 
