@@ -54,7 +54,7 @@ body{
     padding:14px 30px;
     border-radius:50px;
     cursor:pointer;
-    transition:.4s
+    transition:.4s;
 }
 
 .navbar button:hover{
@@ -175,26 +175,15 @@ footer{
 .modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.85);
+    background:rgba(0,0,0,.94);
     display:none;
     align-items:center;
     justify-content:center;
     z-index:100;
-    backdrop-filter:blur(12px);
-    opacity:0;
-    transition:opacity .3s ease
-}
-
-.modal.show{
-    opacity:1
-}
-
-.modal.hide{
-    opacity:0
+    backdrop-filter:blur(12px)
 }
 
 .modal-content{
-    position:relative;
     background:linear-gradient(180deg,#0b0b13,#050509);
     padding:46px;
     max-width:620px;
@@ -203,7 +192,7 @@ footer{
     text-align:center;
     transform:scale(.7);
     opacity:0;
-    transition:transform .35s ease, opacity .35s ease
+    transition:.35s
 }
 
 .modal.show .modal-content{
@@ -216,7 +205,13 @@ footer{
     opacity:0
 }
 
-.modal-content img,
+.modal-content img{
+    width:100%;
+    margin:28px 0;
+    border-radius:16px;
+    animation:fadeUp 1s ease forwards
+}
+
 .modal-content iframe{
     width:100%;
     margin:28px 0;
@@ -231,26 +226,15 @@ footer{
     cursor:pointer;
     font-size:28px;
     color:#eee;
-    transition:.3s
-}
-
-.close:hover{
-    color:#fff;
-    transform:scale(1.2)
 }
 
 .reveal{
-    opacity:1;
-    transform:none
-}
-
-.reveal.animate{
     opacity:0;
     transform:translateY(80px) scale(.9);
     transition:1.2s cubic-bezier(.2,.8,.2,1)
 }
 
-.reveal.animate.active{
+.reveal.active{
     opacity:1;
     transform:translateY(0) scale(1)
 }
@@ -260,6 +244,7 @@ footer{
 @keyframes glowText{from{text-shadow:0 0 20px #5b3cff}to{text-shadow:0 0 45px #9f88ff}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes pulseSoft{0%,100%{opacity:.8}50%{opacity:1}}
+
 
 
 
