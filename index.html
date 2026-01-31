@@ -8,142 +8,168 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="banner">
-        <img src="imagenes/banner.png">
-        <h1>Dilanz</h1>
-    </header>
 
-    <nav class="navbar">
-        <button onclick="scrollToSection('sobre-mi')">Sobre mí</button>
-        <button onclick="scrollToSection('experiencia')">Experiencia</button>
-        <button onclick="scrollToSection('estudios')">Estudios</button>
-        <button onclick="scrollToSection('mods')">Mods</button>
-        <button onclick="scrollToSection('configuracion')">Configuración</button>
-    </nav>
+<header class="banner">
+    <img src="imagenes/banner.png">
+    <h1>Dilanz</h1>
+</header>
 
-    <main class="container">
-        <section id="sobre-mi" class="section reveal">
-            <h2>Sobre mí</h2>
-            <p>
-                Soy Dilanz, configurador y modder.
-                Normalmente trabajo en Water Games, especialmente en Squid Game, y en ocasiones participo en comisiones o colaboro ayudando en otros eventos y proyectos.
-                Me he especializado principalmente en Minecraft Forge, desarrollando mods, sistemas personalizados y soluciones técnicas para eventos y servidores.
-                Actualmente también estoy aprendiendo Fabric, enfocándome en actualizar proyectos, corregir fallas, optimizar código y adaptarme a versiones más recientes del juego.
-            </p>
-        </section>
+<nav class="navbar">
+    <button onclick="scrollToSection('sobre-mi')">Sobre mí</button>
+    <button onclick="scrollToSection('experiencia')">Experiencia</button>
+    <button onclick="scrollToSection('estudios')">Estudios</button>
+    <button onclick="scrollToSection('mods')">Mods</button>
+    <button onclick="scrollToSection('configuracion')">Configuración</button>
+</nav>
 
-        <section id="experiencia" class="section reveal">
-            <h2>Experiencia</h2>
-            <p><strong>Squid Axort Games 2:</strong><br>
-                Este evento salió mal; fue una colaboración entre ustedes, pero representó un gran aprendizaje para mí.
-            </p>
+<main class="container">
 
-            <p><strong>Squid Veers Games 1.5:</strong><br>
-                Fui uno de los desarrolladores y configuradores de este evento, el cual salió mal por problemas de hosting, pero se retomará el 7 de febrero.
-            </p>
+<section id="sobre-mi" class="section reveal">
+    <h2>Sobre mí</h2>
+    <p>
+        Soy Dilanz, configurador y modder. Normalmente trabajo en Water Games, especialmente en Squid Game, y en ocasiones participo en comisiones o colaboro ayudando en otros eventos y proyectos.
+        Me he especializado principalmente en Minecraft Forge, desarrollando mods, sistemas personalizados y soluciones técnicas para eventos y servidores.
+        Actualmente también estoy aprendiendo Fabric, enfocándome en actualizar proyectos, corregir fallas, optimizar código y adaptarme a versiones más recientes del juego.
+    </p>
+</section>
 
-            <p><strong>Water Games:</strong><br>
-                Este ha sido mi evento y con el que empecé. Es algo muy especial para mí, ya que aquí he aprendido todo sobre cómo realizar un evento. Aunque aún sigue en desarrollo, saldrá pronto.
-            </p>
+<section id="experiencia" class="section reveal">
+    <h2>Experiencia</h2>
 
-            <p><strong>Estudios y comunidades en las que he trabajado y ayudado:</strong><br>
-                Cherry Events, AG, Nebula Community, Turtle Club, Squid Craft Games 4 (Recreation), SV Studios, Mister Club, PB, Pixel Club y Janeiro.
-            </p>
-        </section>
+    <p><strong>Squid Axort Games 2</strong><br>
+        Evento colaborativo que no salió como se esperaba, pero representó un aprendizaje importante a nivel técnico y organizativo.
+    </p>
 
-        <section id="estudios" class="section list reveal">
-            <h2>Estudios</h2>
-            <ul>
-                <li onclick="openModal('Owleaf','imagenes/owleaf.png','Estudio de minecraft')">
-                    <img src="imagenes/owleaf.png"><p>Owleaf</p>
-                </li>
-                <li onclick="openModal('Nebula','imagenes/nebula.png','Estudio de sunset games')">
-                    <img src="imagenes/nebula.png"><p>Nebula</p>
-                </li>
-                <li onclick="openModal('Cherry','imagenes/cherry.png','Mi estudio favorito')">
-                    <img src="imagenes/cherry.png"><p>Cherry</p>
-                </li>
-            </ul>
-        </section>
+    <p><strong>Squid Veers Games 1.5</strong><br>
+        Participé como uno de los desarrolladores y configuradores principales. El evento tuvo problemas de hosting, pero será retomado el 7 de febrero.
+    </p>
 
-        <section id="mods" class="section list reveal">
-            <h2>Mods</h2>
-            <ul>
-                <li onclick="openVideoModal('WaterAnim','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','Mod que agrega animaciones customizables, emotes y layers')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg">
-                        <div class="play-button">▶</div>
-                    </div>
-                    <p>WaterAnim</p>
-                </li>
-                <li onclick="openModal('Instrucciones','imagenes/instrucciones.png','Mod de instrucciones')">
-                    <img src="imagenes/instrucciones.png"><p>Instrucciones</p>
-                </li>
-            </ul>
-        </section>
+    <p><strong>Water Games</strong><br>
+        Mi proyecto personal y el evento con el que inicié. Es especialmente importante para mí, ya que aquí aprendí todo el proceso de desarrollo, configuración y organización de eventos. Actualmente sigue en desarrollo y saldrá próximamente.
+    </p>
 
-        <section id="configuracion" class="section list reveal">
-            <h2>Configuración</h2>
-            <ul>
-                <li onclick="openVideoModal('Ahorcado','https://www.youtube-nocookie.com/embed/WbuoSSp1ro8','Juego de ahorcado')">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/WbuoSSp1ro8/maxresdefault.jpg">
-                        <div class="play-button">▶</div>
-                    </div>
-                    <p>Ahorcado</p>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <p><strong>Estudios y comunidades donde he trabajado o colaborado</strong><br>
+        Cherry Events, AG, Nebula Community, Turtle Club, Squid Craft Games 4 (Recreation), SV Studios, Mister Club, PB, Pixel Club y Janeiro.
+    </p>
+</section>
 
-    <footer>
-        <p>© 2025 Dilanz</p>
-    </footer>
+<section id="estudios" class="section list reveal">
+    <h2>Estudios</h2>
+    <ul>
+        <li onclick="openModal('Owleaf','imagenes/owleaf.png','Estudio de minecraft')">
+            <img src="imagenes/owleaf.png"><p>Owleaf</p>
+        </li>
+        <li onclick="openModal('Nebula','imagenes/nebula.png','Estudio de sunset games')">
+            <img src="imagenes/nebula.png"><p>Nebula</p>
+        </li>
+        <li onclick="openModal('Cherry','imagenes/cherry.png','Mi estudio favorito')">
+            <img src="imagenes/cherry.png"><p>Cherry</p>
+        </li>
+    </ul>
+</section>
 
-    <div id="modal" class="modal" onclick="closeModal(event)">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">✕</span>
-            <h2 id="modal-title"></h2>
-            <img id="modal-image">
-            <iframe id="modal-video" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-            <p id="modal-text"></p>
-        </div>
+<section id="mods" class="section list reveal">
+    <h2>Mods</h2>
+    <ul>
+        <li onclick="openVideoModal('WaterAnim','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','Mod que agrega animaciones customizables, emotes y layers')">
+            <div class="video-thumb">
+                <img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg">
+                <div class="play-button">▶</div>
+            </div>
+            <p>WaterAnim</p>
+        </li>
+        <li onclick="openModal('Instrucciones','imagenes/instrucciones.png','Mod de instrucciones')">
+            <img src="imagenes/instrucciones.png"><p>Instrucciones</p>
+        </li>
+    </ul>
+</section>
+
+<section id="configuracion" class="section list reveal">
+    <h2>Configuración</h2>
+    <ul>
+        <li onclick="openVideoModal('Ahorcado','https://www.youtube-nocookie.com/embed/WbuoSSp1ro8','Juego de ahorcado')">
+            <div class="video-thumb">
+                <img src="https://img.youtube.com/vi/WbuoSSp1ro8/maxresdefault.jpg">
+                <div class="play-button">▶</div>
+            </div>
+            <p>Ahorcado</p>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2025 Dilanz</p>
+</footer>
+
+<div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">✕</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image">
+        <iframe id="modal-video" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+        <p id="modal-text"></p>
     </div>
+</div>
 
-    <script>
-        function scrollToSection(id){
-            document.getElementById(id).scrollIntoView({behavior:"smooth"})
-        }
-        function openModal(t,i,tx){
-            const m=document.getElementById("modal")
-            const img=document.getElementById("modal-image")
-            const video=document.getElementById("modal-video")
-            document.getElementById("modal-title").innerText=t
-            img.src=i
-            img.style.display="block"
-            video.style.display="none"
-            document.getElementById("modal-text").innerText=tx
-            m.style.display="flex"
-        }
-        function openVideoModal(t,u,tx){
-            const m=document.getElementById("modal")
-            const img=document.getElementById("modal-image")
-            const video=document.getElementById("modal-video")
-            document.getElementById("modal-title").innerText=t
-            video.src=u
-            video.style.display="block"
-            img.style.display="none"
-            document.getElementById("modal-text").innerText=tx
-            m.style.display="flex"
-        }
-        function closeModal(){
-            const m=document.getElementById("modal")
-            const video=document.getElementById("modal-video")
-            video.src=""
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:"smooth"})
+}
+
+function openModal(t,i,tx){
+    const m=document.getElementById("modal")
+    const img=document.getElementById("modal-image")
+    const video=document.getElementById("modal-video")
+    document.getElementById("modal-title").innerText=t
+    img.src=i
+    img.style.display="block"
+    video.style.display="none"
+    document.getElementById("modal-text").innerText=tx
+    m.classList.remove("hide")
+    m.style.display="flex"
+    setTimeout(()=>m.classList.add("show"),10)
+}
+
+function openVideoModal(t,u,tx){
+    const m=document.getElementById("modal")
+    const img=document.getElementById("modal-image")
+    const video=document.getElementById("modal-video")
+    document.getElementById("modal-title").innerText=t
+    video.src=u
+    video.style.display="block"
+    img.style.display="none"
+    document.getElementById("modal-text").innerText=tx
+    m.classList.remove("hide")
+    m.style.display="flex"
+    setTimeout(()=>m.classList.add("show"),10)
+}
+
+function closeModal(e){
+    const m=document.getElementById("modal")
+    const video=document.getElementById("modal-video")
+    if(!e||e.target.id==="modal"){
+        m.classList.remove("show")
+        m.classList.add("hide")
+        setTimeout(()=>{
             m.style.display="none"
-        }
-    </script>
+            video.src=""
+        },300)
+    }
+}
+
+const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting)e.target.classList.add("active")
+    })
+},{threshold:.2})
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))
+</script>
+
 </body>
 </html>
+
 
 
