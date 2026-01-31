@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 *{box-sizing:border-box}
+
 body{
     margin:0;
     font-family:Inter,sans-serif;
@@ -7,17 +9,20 @@ body{
     color:#e6e6eb;
     overflow-x:hidden
 }
+
 .banner{
     position:relative;
     height:280px;
     animation:fadeDown 1.6s ease forwards
 }
+
 .banner img{
     width:100%;
     height:100%;
     object-fit:cover;
     filter:brightness(.35) saturate(1.2)
 }
+
 .banner h1{
     position:absolute;
     inset:0;
@@ -28,6 +33,7 @@ body{
     letter-spacing:4px;
     animation:glowText 3s infinite alternate
 }
+
 .navbar{
     position:sticky;
     top:0;
@@ -40,6 +46,7 @@ body{
     z-index:20;
     animation:fadeUp 1.4s ease forwards
 }
+
 .navbar button{
     background:transparent;
     border:1px solid #222;
@@ -47,33 +54,39 @@ body{
     padding:14px 30px;
     border-radius:50px;
     cursor:pointer;
-    transition:.4s;
+    transition:.4s
 }
+
 .navbar button:hover{
     background:#111;
     box-shadow:0 0 20px rgba(120,80,255,.25);
     transform:translateY(-4px) scale(1.05)
 }
+
 .container{
     max-width:1200px;
     margin:auto;
     padding:120px 20px
 }
+
 .section{
     margin-bottom:140px;
     text-align:center
 }
+
 .section h2{
     font-size:2.6rem;
     margin-bottom:26px;
     animation:pulseSoft 6s infinite
 }
+
 .section p{
     max-width:720px;
     margin:auto;
     line-height:1.9;
     color:#b9b9c8
 }
+
 .list ul{
     display:flex;
     flex-wrap:wrap;
@@ -82,6 +95,7 @@ body{
     padding:0;
     list-style:none
 }
+
 .list li{
     width:220px;
     background:linear-gradient(180deg,#0c0c14,#07070b);
@@ -91,28 +105,33 @@ body{
     transition:.45s;
     animation:float 6s ease-in-out infinite
 }
+
 .list li:hover{
     transform:translateY(-12px) scale(1.08) rotate(.5deg);
     box-shadow:0 25px 50px rgba(0,0,0,.7),0 0 30px rgba(120,80,255,.35)
 }
+
 .list img{
     width:100%;
     height:140px;
     object-fit:cover;
     transition:.5s
 }
+
 .video-thumb{
     position:relative;
     width:100%;
     height:140px;
     overflow:hidden
 }
+
 .video-thumb img{
     width:100%;
     height:100%;
     object-fit:cover;
     transition:.5s
 }
+
 .play-button{
     position:absolute;
     top:50%;
@@ -130,24 +149,29 @@ body{
     transition:.3s;
     pointer-events:none
 }
+
 .list li:hover .play-button{
     background:rgba(255,0,0,1);
     transform:translate(-50%,-50%) scale(1.15);
     box-shadow:0 0 20px rgba(255,0,0,.5)
 }
+
 .list li:hover img{
     transform:scale(1.15);
     filter:brightness(1.2)
 }
+
 .list p{
     padding:16px
 }
+
 footer{
     text-align:center;
     padding:80px;
     color:#777;
     animation:fadeUp 2s ease forwards
 }
+
 .modal{
     position:fixed;
     inset:0;
@@ -158,6 +182,7 @@ footer{
     z-index:100;
     backdrop-filter:blur(12px)
 }
+
 .modal-content{
     background:linear-gradient(180deg,#0b0b13,#050509);
     padding:46px;
@@ -169,46 +194,55 @@ footer{
     opacity:0;
     transition:.35s
 }
+
 .modal.show .modal-content{
     transform:scale(1);
     opacity:1
 }
+
 .modal.hide .modal-content{
     transform:scale(.6);
     opacity:0
 }
-.modal-content img{
-    width:100%;
-    margin:28px 0;
-    border-radius:16px;
-    animation:fadeUp 1s ease forwards
-}
+
+.modal-content img,
 .modal-content iframe{
     width:100%;
     margin:28px 0;
     border-radius:16px;
     animation:fadeUp 1s ease forwards
 }
+
 .close{
     position:absolute;
     top:26px;
     right:30px;
     cursor:pointer;
     font-size:28px;
-    color:#eee;
+    color:#eee
 }
+
 .reveal{
+    opacity:1;
+    transform:none
+}
+
+.reveal.animate{
     opacity:0;
     transform:translateY(80px) scale(.9);
     transition:1.2s cubic-bezier(.2,.8,.2,1)
 }
-.reveal.active{
+
+.reveal.animate.active{
     opacity:1;
     transform:translateY(0) scale(1)
 }
+
 @keyframes fadeDown{from{opacity:0;transform:translateY(-60px)}to{opacity:1}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(60px)}to{opacity:1}}
 @keyframes glowText{from{text-shadow:0 0 20px #5b3cff}to{text-shadow:0 0 45px #9f88ff}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes pulseSoft{0%,100%{opacity:.8}50%{opacity:1}}
+
+
 
