@@ -6,11 +6,24 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Dilanz</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo adicional para permitir el zoom suave en la imagen del modal */
+        #modal-image {
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+            max-height: 70vh;
+            object-fit: contain;
+            width: 100%;
+        }
+        #modal-image.zoomed {
+            transform: scale(1.6);
+            cursor: zoom-out;
+        }
+    </style>
 </head>
 <body>
 
 <header class="banner">
-    <img src="imagenes/banner.png">
     <h1>Dilanz</h1>
 </header>
 
@@ -18,146 +31,245 @@
     <button onclick="scrollToSection('sobre-mi')">Sobre mí</button>
     <button onclick="scrollToSection('experiencia')">Experiencia</button>
     <button onclick="scrollToSection('estudios')">Estudios</button>
-    <button onclick="scrollToSection('mods')">Mods</button>
-    <button onclick="scrollToSection('configuracion')">Configuración</button>
+    <button onclick="scrollToSection('water-games')">Water Games</button>
+    <button onclick="scrollToSection('squid-veers')">Squid Veers Games 1.5</button>
+    <button onclick="scrollToSection('otros')">Otros</button>
+    <button onclick="scrollToSection('fotos y mas')">Fotos y mas</button>
 </nav>
 
 <main class="container">
 
 <section id="sobre-mi" class="section reveal">
     <h2>Sobre mí</h2>
-    <p>Soy Dilanz, configurador y modder. Normalmente trabajo en Water Games, especialmente en Squid Game, y en ocasiones participo en comisiones o colaboro ayudando en otros eventos y proyectos. Me he especializado principalmente en Minecraft Forge, desarrollando mods, sistemas personalizados y soluciones técnicas para eventos y servidores. Actualmente también estoy aprendiendo Fabric, enfocándome en actualizar proyectos, corregir fallas, optimizar código y adaptarme a versiones más recientes del juego. </p>
+    <p>Soy Dilanz, configurador y modder. Normalmente trabajo en un proyecto que no puedo decir mucho y en ocasiones participo en comisiones o colaboro ayudando en otros eventos y proyectos. Me he especializado principalmente en Minecraft Forge y Fabric , desarrollando mods, sistemas personalizados y soluciones técnicas para eventos y servidores. Tambien soy un configurador especializado en Conditional Events y Servervariables intentando llevar el plugin a lo maximo como sistemas avanzado como ahorcado, generacion de cartas de memoria, mingle y muchas cosas mas.</p>
 </section>
 
 <section id="experiencia" class="section reveal">
     <h2>Experiencia</h2>
 
-    <p><strong>Squid Axort Games 2</strong><br>
-        Evento que salió mal. Fue una colaboración que representó un gran aprendizaje personal.
+    <div class="experiencia-item">
+        <p><strong>Squid Axort Games 2</strong><br>
+            Evento que salió mal. Fue una colaboración que representó un gran aprendizaje personal.
+        </p>
+        <div class="experiencia-video" onclick="openVideoModal('Squid Axort Games 2','https://www.youtube-nocookie.com/embed/zK51kLfaf6c?start=4275','Squid Axort Games 2')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/zK51kLfaf6c/maxresdefault.jpg"><div class="play-button">▶</div></div>
+        </div>
+    </div>
+
+    <div class="experiencia-item">
+        <p><strong>Squid Veers Games 1.5</strong><br>
+            Fui uno de los desarrolladores y configuradores principales. El evento tuvo problemas de hosting, pero se retomo el 7 de febrero y salio bien.
+        </p>
+        <div class="experiencia-video" onclick="openVideoModal('Squid Veers Games 1.5','https://www.youtube-nocookie.com/embed/DxeeY04wI4w','Squid Veers Games 1.5')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/DxeeY04wI4w/maxresdefault.jpg"><div class="play-button">▶</div></div>
+        </div>
+    </div>
+
+    <div class="experiencia-item">
+        <p><strong>Water Games</strong><br>
+            Mi evento principal y proyecto personal. Aquí aprendí todo sobre la creación y gestión de eventos. Actualmente termino y se ven setup para mi la repeticion oficial fue perfecta.
+        </p>
+        <div class="experiencia-video" onclick="openVideoModal('Water Games','https://www.youtube-nocookie.com/embed/0rJqstWGBiU','Water Games')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/0rJqstWGBiU/maxresdefault.jpg"><div class="play-button">▶</div></div>
+        </div>
+    </div>
+
+    <p style="margin-top: 30px;"><strong>Estudios y comunidades donde he trabajado o colaborado</strong><br>
+        Cherry Events, AG, Cloud Events, Turtle Club, Squid Craft Games 4 (Recreation), SV Studios, Mister Club, PB, Pixel Events y Janeiro.
     </p>
 
-    <p><strong>Squid Veers Games 1.5</strong><br>
-        Fui uno de los desarrolladores y configuradores. El evento tuvo problemas de hosting, pero se retomará el 7 de febrero.
-    </p>
-
-    <p><strong>Water Games</strong><br>
-        Mi evento principal y proyecto personal. Aquí aprendí todo sobre la creación y gestión de eventos. Actualmente sigue en desarrollo y saldrá próximamente.
-    </p>
-
-    <p><strong>Estudios y comunidades donde he trabajado o colaborado</strong><br>
-        Cherry Events, AG, Nebula Community, Turtle Club, Squid Craft Games 4 (Recreation), SV Studios, Mister Club, PB, Pixel Events y Janeiro.
-    </p>
+    <div class="experiencia-extra" onclick="openModal('Evento de construcción con Pandita','imagenes/pandita.png','Evento de construcción junto a pandita')">
+        <p><strong>Evento de construcción con Pandita</strong></p>
+        <img src="imagenes/pandita.png" alt="Evento con Pandita">
+    </div>
 </section>
 
 <section id="estudios" class="section list reveal">
     <h2>Estudios</h2>
     <ul>
-        <li onclick="openModal('Owleaf','imagenes/owleaf.png','Estudio de minecraft')"><img src="imagenes/owleaf.png"><p>Owleaf</p></li>
-        <li onclick="openModal('Nebula','imagenes/nebula.png','Estudio de sunset games')"><img src="imagenes/nebula.png"><p>Nebula</p></li>
+        <li onclick="openModal('Cloud Events','imagenes/cloud.png','Estudio de Water Games')"><img src="imagenes/cloud.png"><p>Cloud Events</p></li>
         <li onclick="openModal('Cherry','imagenes/cherry.png','Mi estudio favorito')"><img src="imagenes/cherry.png"><p>Cherry</p></li>
     </ul>
 </section>
 
-<section id="mods" class="section list reveal">
-    <h2>Mods</h2>
+<section id="water-games" class="section list reveal">
+    <h2>Water Games</h2>
     <ul>
-        <li onclick="openVideoModal('WaterAnim','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','Mod que agrega animaciones customizablles, emotes y layers este video de pato pato ganso se puede ver la mayoria de mecanicas del mod')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>WaterAnim</p>
+        <li onclick="openVideoModal('Dulce Sueños','https://www.youtube-nocookie.com/embed/s4JdsOibW0k','Dulce Sueños')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/s4JdsOibW0k/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Dulce Sueños</p>
         </li>
-
-        <li onclick="openModal('Instrucciones','imagenes/instrucciones.png','Mod de instrucciones replica al de eufonia estudio')"><img src="imagenes/instrucciones.png"><p>Instrucciones</p></li>
-
-        <li onclick="openVideoModal('Torre','https://www.youtube-nocookie.com/embed/iXmiwPqRoCI','Mod Juego de la torre para sunset games este esta en fabric y forge')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/iXmiwPqRoCI/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>Torre</p>
-        </li>
-
-        <li onclick="openVideoModal('Periquito','https://www.youtube-nocookie.com/embed/E849ZAW5voM','Mod El juego de periquito de squid craft games 4 viene con sistema de camara y todo')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/E849ZAW5voM/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
+        <li onclick="openVideoModal('Periquito','https://www.youtube-nocookie.com/embed/9-y3Qi1cTMs','Periquito')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/9-y3Qi1cTMs/maxresdefault.jpg"><div class="play-button">▶</div></div>
             <p>Periquito</p>
         </li>
-
-        <li onclick="openVideoModal('Galleta','https://www.youtube-nocookie.com/embed/YJSjmH2teVQ','Mod de la galleta de squid game 4')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/YJSjmH2teVQ/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
+        <li onclick="openVideoModal('Mingle','https://www.youtube-nocookie.com/embed/SHobkttFZHQ','Mingle')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/SHobkttFZHQ/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Mingle</p>
+        </li>
+        <li onclick="openVideoModal('Galleta','https://www.youtube-nocookie.com/embed/YJSjmH2teVQ','Galleta')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/YJSjmH2teVQ/maxresdefault.jpg"><div class="play-button">▶</div></div>
             <p>Galleta</p>
         </li>
-
-        <li onclick="openModal('Pizarra','imagenes/pizarra.png','Pizarra funcional se aprecia en el juego de ahorcado')"><img src="imagenes/pizarra.png"><p>Pizarra funcional se aprecia en el juego de ahorcado</p></li>
-
-        <li onclick="openVideoModal('Subtítulos','https://www.youtube-nocookie.com/embed/nkj2JiBnZoU','Mod que agrega subtítulos personalizados al juego')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/nkj2JiBnZoU/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>Subtítulos</p>
+        <li onclick="openVideoModal('Este truco solo puede hacerse una vez','https://www.youtube-nocookie.com/embed/XsnPSbr_jAo','Este truco solo puede hacerse una vez')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/XsnPSbr_jAo/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Este truco solo puede hacerse una vez</p>
+        </li>
+        <li onclick="openVideoModal('Torre','https://www.youtube-nocookie.com/embed/iXmiwPqRoCI','Torre')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/iXmiwPqRoCI/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Torre</p>
+        </li>
+        <li onclick="openVideoModal('Pato Pato Ganso','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','Pato Pato Ganso')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Pato Pato Ganso</p>
+        </li>
+        <li onclick="openVideoModal('Ahorcado','https://www.youtube-nocookie.com/embed/WbuoSSp1ro8','Ahorcado')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/WbuoSSp1ro8/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Ahorcado</p>
+        </li>
+        <li onclick="openVideoModal('Memoria','https://www.youtube-nocookie.com/embed/TnU-d5DZTGU','Memoria')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/TnU-d5DZTGU/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Memoria</p>
+        </li>
+        <li onclick="openVideoModal('Enbase','https://www.youtube-nocookie.com/embed/3uNQT5FFu3Y','Enbase')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/3uNQT5FFu3Y/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Enbase</p>
+        </li>
+        <li onclick="openVideoModal('Final','https://www.youtube-nocookie.com/embed/Npjt_qYKog4','Final')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/Npjt_qYKog4/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Final</p>
         </li>
     </ul>
 </section>
 
-<section id="configuracion" class="section list reveal">
-    <h2>Configuración</h2>
+<section id="squid-veers" class="section list reveal">
+    <h2>Squid Veers Games 1.5</h2>
     <ul>
-        <li onclick="openVideoModal('Ahorcado','https://www.youtube-nocookie.com/embed/WbuoSSp1ro8','Juego de ahorcado de squid craft games 2')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/WbuoSSp1ro8/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>Ahorcado</p>
+        <li onclick="openVideoModal('Mingle','https://www.youtube-nocookie.com/embed/4wdyD665uvg','Mingle Squid Veers Games 1.5')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/4wdyD665uvg/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Mingle</p>
         </li>
-
-        <li onclick="openVideoModal('Memoria','https://www.youtube-nocookie.com/embed/TnU-d5DZTGU','Juego de memoria de squid craft games 3')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/TnU-d5DZTGU/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>Memoria</p>
-        </li>
-
-        <li onclick="openVideoModal('Enbase','https://www.youtube-nocookie.com/embed/3uNQT5FFu3Y','juego de enbase con shader personalizado de squid craft games 2')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/3uNQT5FFu3Y/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>Enbase</p>
-        </li>
-
-        <li onclick="openVideoModal('Dulce Sueños','https://www.youtube-nocookie.com/embed/s4JdsOibW0k','juego de dulce sueños de squid craft games 4')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/s4JdsOibW0k/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>Dulce Sueños</p>
-        </li>
-
-        <li onclick="openVideoModal('Pato Pato Ganso','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','el juego de pato pato ganso de squid craft games 4')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
+        <li onclick="openVideoModal('Pato Pato Ganso','https://www.youtube-nocookie.com/embed/M8jNABysZAM','Pato Pato Ganso Squid Veers Games 1.5')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/M8jNABysZAM/maxresdefault.jpg"><div class="play-button">▶</div></div>
             <p>Pato Pato Ganso</p>
         </li>
-
-        <li onclick="openVideoModal('Final Squid 3','https://www.youtube-nocookie.com/embed/Npjt_qYKog4','Tercera entrega del minijuego Final de Squid craft games')">
-            <div class="video-thumb">
-                <img src="https://img.youtube.com/vi/Npjt_qYKog4/maxresdefault.jpg">
-                <div class="play-button">▶</div>
-            </div>
-            <p>Final Squid 3</p>
+        <li onclick="openVideoModal('Cristales','https://www.youtube-nocookie.com/embed/m9g4vQAfYpI','Cristales Squid Veers Games 1.5')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/m9g4vQAfYpI/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Cristales</p>
         </li>
     </ul>
+</section>
+
+<section id="otros" class="section list reveal">
+    <h2>Otros</h2>
+    <ul>
+        <li onclick="openModal('Instrucciones','imagenes/instrucciones.png','Mod de instrucciones replica al de eufonia estudio')">
+            <img src="imagenes/instrucciones.png" alt="Instrucciones">
+            <p>Instrucciones</p>
+        </li>
+        <li onclick="openVideoModal('Tetris','https://www.youtube-nocookie.com/embed/9b00T2Bh4yk','Tetris')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/9b00T2Bh4yk/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Tetris</p>
+        </li>
+        <li onclick="openVideoModal('WaterAnim','https://www.youtube-nocookie.com/embed/E_1Wgvc-cWg','WaterAnim')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/E_1Wgvc-cWg/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>WaterAnim</p>
+        </li>
+        <li onclick="openVideoModal('Eulights','https://www.youtube-nocookie.com/embed/td8jK1xqn1M','Eulights')">
+            <div class="video-thumb"><img src="https://img.youtube.com/vi/td8jK1xqn1M/maxresdefault.jpg"><div class="play-button">▶</div></div>
+            <p>Eulights</p>
+        </li>
+        <li onclick="openModal('DilanzEvents','imagenes/dilanzevents.png','DilanzEvents es un mod 100% igual que cuenta con Conditional Events, Server Variables, World Guard y Placeholder API, además de stimer y sistema de creación de GUIs, overlays y Screens. Actualmente no está completo al 100%.')">
+            <img src="imagenes/dilanzevents.png" alt="DilanzEvents">
+            <p>DilanzEvents</p>
+        </li>
+    </ul>
+</section>
+
+<section id="fotos y mas" class="section list reveal">
+    <h2>Fotos y mas</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px;">
+        <div onclick="openModal('foto1','imagenes/foto1.png','foto1')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto1.png" alt="foto1" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto1</p>
+        </div>
+        <div onclick="openModal('foto2','imagenes/foto2.png','foto2')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto2.png" alt="foto2" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto2</p>
+        </div>
+        <div onclick="openModal('foto3','imagenes/foto3.png','foto3')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto3.png" alt="foto3" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto3</p>
+        </div>
+        <div onclick="openModal('foto4','imagenes/foto4.png','foto4')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto4.png" alt="foto4" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto4</p>
+        </div>
+        <div onclick="openModal('foto5','imagenes/foto5.png','foto5')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto5.png" alt="foto5" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto5</p>
+        </div>
+        <div onclick="openModal('foto6','imagenes/foto6.png','foto6')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto6.png" alt="foto6" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto6</p>
+        </div>
+        <div onclick="openModal('foto7','imagenes/foto7.png','foto7')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto7.png" alt="foto7" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto7</p>
+        </div>
+        <div onclick="openModal('foto8','imagenes/foto8.png','foto8')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto8.png" alt="foto8" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto8</p>
+        </div>
+        <div onclick="openModal('foto9','imagenes/foto9.png','foto9')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto9.png" alt="foto9" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto9</p>
+        </div>
+        <div onclick="openModal('foto10','imagenes/foto10.png','foto10')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto10.png" alt="foto10" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto10</p>
+        </div>
+        <div onclick="openModal('foto11','imagenes/foto11.png','foto11')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto11.png" alt="foto11" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto11</p>
+        </div>
+        <div onclick="openModal('foto12','imagenes/foto12.png','foto12')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto12.png" alt="foto12" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto12</p>
+        </div>
+        <div onclick="openModal('foto13','imagenes/foto13.png','foto13')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto13.png" alt="foto13" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto13</p>
+        </div>
+        <div onclick="openModal('foto14','imagenes/foto14.png','foto14')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto14.png" alt="foto14" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto14</p>
+        </div>
+        <div onclick="openModal('foto15','imagenes/foto15.png','foto15')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto15.png" alt="foto15" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto15</p>
+        </div>
+        <div onclick="openModal('foto16','imagenes/foto16.png','foto16')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto16.png" alt="foto16" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto16</p>
+        </div>
+        <div onclick="openModal('foto17','imagenes/foto17.png','foto17')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto17.png" alt="foto17" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto17</p>
+        </div>
+        <div onclick="openModal('foto18','imagenes/foto18.png','foto18')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto18.png" alt="foto18" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto18</p>
+        </div>
+        <div onclick="openModal('foto19','imagenes/foto19.png','foto19')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto19.png" alt="foto19" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto19</p>
+        </div>
+        <div onclick="openModal('foto20','imagenes/foto20.png','foto20')" style="cursor: pointer; text-align: center;">
+            <img src="imagenes/foto20.png" alt="foto20" style="width: 100%; border-radius: 8px;">
+            <p style="margin-top: 5px; font-size: 14px;">foto20</p>
+        </div>
+    </div>
 </section>
 
 </main>
@@ -170,7 +282,8 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal()">✕</span>
         <h2 id="modal-title"></h2>
-        <img id="modal-image">
+        <!-- Se añadió la función toggleZoom() al hacer clic en la imagen -->
+        <img id="modal-image" onclick="toggleZoom(event)">
         <iframe id="modal-video" width="100%" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
         <p id="modal-text"></p>
     </div>
@@ -185,6 +298,10 @@ function openModal(t,i,tx){
     const m=document.getElementById("modal")
     const img=document.getElementById("modal-image")
     const video=document.getElementById("modal-video")
+    
+    // Al abrir una nueva foto, nos aseguramos de quitar el zoom anterior
+    img.classList.remove("zoomed");
+
     document.getElementById("modal-title").innerText=t
     img.src=i
     img.style.display="block"
@@ -199,6 +316,9 @@ function openVideoModal(t,videoUrl,desc){
     const m=document.getElementById("modal")
     const img=document.getElementById("modal-image")
     const video=document.getElementById("modal-video")
+    
+    img.classList.remove("zoomed");
+
     document.getElementById("modal-title").innerText=t
     video.src=videoUrl
     video.style.display="block"
@@ -209,15 +329,25 @@ function openVideoModal(t,videoUrl,desc){
     setTimeout(()=>m.classList.add("show"),10)
 }
 
+// Función para activar o desactivar el zoom al hacer clic en la imagen
+function toggleZoom(e) {
+    e.stopPropagation(); // Evita que se cierre el modal al hacer clic en la imagen
+    const img = document.getElementById("modal-image");
+    img.classList.toggle("zoomed");
+}
+
 function closeModal(e){
     const m=document.getElementById("modal")
     const video=document.getElementById("modal-video")
-    if(!e||e.target.id==="modal"){
+    const img=document.getElementById("modal-image")
+    
+    if(!e||e.target.id==="modal"||e.target.classList.contains("close")){
         m.classList.remove("show")
         m.classList.add("hide")
         setTimeout(()=>{
             m.style.display="none"
             video.src=""
+            img.classList.remove("zoomed") // Quita el zoom al cerrar
         },300)
     }
 }
@@ -233,6 +363,9 @@ document.querySelectorAll(".reveal").forEach(el=>observer.observe(el))
 
 </body>
 </html>
+
+
+
 
 
 
